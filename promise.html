@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+	
+	<button id="btnClick" onclick="Get_Data();">Click Me</button>
+	
+	
+	<script type="text/javascript">
+		
+	
+	
+	function Get_Data() {
+		
+		//1st URL
+		  var promise1 =  new Promise((resolve, reject) => {
+		    $.ajax({
+		      url: 'https://morning-shelf-84536.herokuapp.com/story1',
+		      type: 'GET',
+		      data: {key: 'value'},
+		      dataType: "json",
+		      success: function(data) {
+		        resolve(data)
+		      },
+		      error: function(error) {
+		        reject(error)
+		      }
+		    })
+		  })
+		  
+		  promise1.then(function(data){
+			  console.log(data)
+		  })
+		  .catch(e =>{
+			  console.log('Error');
+		  })
+		  
+		
+		//2nd URL
+		  var promise2 =  new Promise((resolve, reject) => {
+			    $.ajax({
+			      url: 'https://morning-shelf-84536.herokuapp.com/story2',
+			      type: 'GET',
+			      data: {key: 'value'},
+			      dataType: "json",
+			      success: function(data) {
+			        resolve(data)
+			      },
+			      error: function(error) {
+			        reject(error)
+			      }
+			    })
+			  })
+			  
+			  promise2.then(function(data){
+				  console.log(data)
+			  })
+			  .catch(e =>{
+			  console.log('Error');
+		  })
+		
+		//3rd URL
+		  var promise3 =  new Promise((resolve, reject) => {
+			    $.ajax({
+			      url: 'https://morning-shelf-84536.herokuapp.com/story3',
+			      type: 'GET',
+			      data: {key: 'value'},
+			      dataType: "json",
+			      success: function(data) {
+			        resolve(data)
+			      },
+			      error: function(error) {
+			        reject(error)
+			      }
+			    })
+			  })
+			  
+			  promise3.then(function(data){
+				  console.log(data)
+			  })
+			  .catch(e =>{
+			  console.log('Error');
+		  })
+		
+		//4th URL
+		  var promise4 =  new Promise((resolve, reject) => {
+			    $.ajax({
+			      url: 'https://morning-shelf-84536.herokuapp.com/story4',
+			      type: 'GET',
+			      data: {key: 'value'},
+			      dataType: "json",
+			      success: function(data) {
+			        resolve(data)
+			      },
+			      error: function(error) {
+			        reject(error)
+			      }
+			    })
+			  })
+			  
+			  promise4.then(function(data){
+				  console.log(data)
+			  })
+			  .catch(e =>{
+			  console.log('Error');
+		  })
+		}
+	</script>
+</body>
+</html>
